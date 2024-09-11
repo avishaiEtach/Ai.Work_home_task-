@@ -1,0 +1,61 @@
+@import "../../assets/styles/setup/setup";
+
+.option-container {
+  display: flex;
+  padding-inline: 20px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  span {
+    font-size: rem(14px);
+  }
+  img {
+    border-radius: 10px;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.option-title {
+  padding-top: 10px;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.option-votes {
+  &::after {
+    content: "votes";
+    margin-left: 5px;
+  }
+}
+
+.option-button {
+  &.MuiButtonBase-root {
+    background-color: $clr4;
+    box-shadow: none;
+    transition: 0.4s;
+    &:hover {
+      filter: brightness(0.8);
+      background-color: $clr4;
+      box-shadow: none;
+    }
+    @media screen and (max-width: $mobile-breakpoint) {
+      align-self: start;
+    }
+  }
+}
+
+.input {
+  min-width: 350px;
+  margin-bottom: 10px;
+  background-color: $clr2;
+}
+
+.player {
+  width: 600px;
+  border-radius: 10px;
+  @media screen and (max-width: $mobile-breakpoint) {
+    width: 350px;
+  }
+}

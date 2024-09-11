@@ -1,0 +1,70 @@
+@import "../../assets/styles/setup/setup";
+
+.history {
+  height: 430px;
+  background-color: $clr2;
+  box-shadow: 0px 1px 8px 0px $clr3;
+  border-radius: 10px;
+  padding: 30px;
+  padding-top: 0;
+  overflow: auto;
+  h2 {
+    padding-block: 30px;
+    text-align: center;
+    font-size: rem(24px);
+    position: sticky;
+    top: 0;
+    background-color: $clr2;
+    box-shadow: 0 0 0 100vmax $clr2;
+    clip-path: inset(0 -100vmax);
+    z-index: 5;
+  }
+  @media screen and (max-width: $small-desktop-breakpoint) {
+    width: 600px;
+  }
+  @media screen and (max-width: $mobile-breakpoint) {
+    width: 340px;
+  }
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background-color: $clr3;
+  border-radius: 10px;
+  padding: 15px;
+  &:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+
+  span {
+    font-size: rem(15px);
+    max-width: 250px;
+    cursor: pointer;
+    transition: 0.4s;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  img {
+    border-radius: 10px;
+  }
+  @media screen and (max-width: $large-desktop-breakpoint) {
+    flex-direction: column;
+  }
+}
+
+.history-button {
+  &.MuiButtonBase-root {
+    background-color: $clr4;
+    box-shadow: none;
+    transition: 0.4s;
+    text-transform: capitalize;
+    &:hover {
+      filter: brightness(0.8);
+      background-color: $clr4;
+      box-shadow: none;
+    }
+  }
+}

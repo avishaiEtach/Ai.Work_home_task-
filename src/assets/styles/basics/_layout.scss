@@ -1,0 +1,17 @@
+.main-container {
+  display: flex;
+  width: 100%;
+  min-height: 100dvh;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 40px;
+  gap: 20px;
+  @media screen and (max-width: $small-desktop-breakpoint) {
+    flex-direction: column;
+    padding-block: 50px;
+    padding-inline: 30px;
+    .history {
+      order: 1;
+    }
+  }
+}
